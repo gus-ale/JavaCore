@@ -8,11 +8,9 @@
         #pu {
             background-color: #BFBFBF;
         }
-
         #colortitulo {
             color: blue;
         }
-
         p {
             background-color: #4343A3;
             color: white;
@@ -23,7 +21,6 @@
             text-align: center;
             line-height: 50px;
         }
-
         /* Estilos para el menú */
         .menu {
             float: left;
@@ -33,7 +30,6 @@
             overflow-y: auto;
             max-height: calc(100vh - 40px);
         }
-
         .menu a {
             display: block;
             padding: 10px;
@@ -45,20 +41,17 @@
             padding-left: 40px;
             border: solid 1px #1A1AB3;
         }
-
         .menu a:hover {
             background-color: #0056b3;
         }
-
         .menu #cab {
             align: center;
         }
-
         .menu a::before {
             content: "";
             width: 24px;
             height: 24px;
-            background-image: url(''); /* URL del ícono */
+            background-image: url('');
             background-size: contain;
             background-repeat: no-repeat;
             position: absolute;
@@ -66,46 +59,32 @@
             top: 50%;
             transform: translateY(-50%);
         }
-
         /* Estilos para los submenús */
         .submenu {
             display: none;
             padding-left: 20px;
         }
-
         .submenu a {
             display: block;
             padding: 5px;
             color: #333;
             text-decoration: none;
         }
-
         /* Estilos para el contenedor del video */
         #video-container {
             margin-top: 20px;
-            margin-left: 0;
+            margin-left: 300px;
             text-align: center;
             background-color: #4D4D4D;
         }
-
-        /* Consultas de medios para diferentes tamaños de pantalla */
-        @media (min-width: 768px) {
-            .menu {
-                width: 300px;
-                float: left;
-            }
-            #video-container {
-                margin-left: 320px; /* Para dejar espacio al menú */
-            }
-        }
-
-        @media (max-width: 767px) {
+        @media (max-width: 600px) {
             .menu {
                 width: 100%;
                 margin-right: 0;
             }
             #video-container {
-                margin-top: 20px;
+                margin-left: 0;
+                width: 100%;
             }
         }
     </style>
@@ -115,11 +94,10 @@
         <div id="cab">
             <img src="">
         </div>
-        <p>JAVA CORE mumu</p>
+        <p>JAVA CORE</p>
         <a href="#" onclick="loadVideo('YGnlPumCuXs')">Cargas eléctricas</a>
         <a href="#" onclick="loadVideo('kVocO-PbyaM')">Ley de Coulomb</a>
         <a href="#" onclick="loadVideo('hQDnU4o7MMk')">Campo eléctrico</a>
-        <!-- Agrega más enlaces a otros videos aquí -->
         <a href="#" onclick="loadVideo('videoId4')">Líneas de fuerza</a>
         <a href="#" onclick="loadVideo('videoId5')">Líneas de fuerza en un dipolo</a>
         <a href="#" onclick="loadVideo('videoId4')">Campo entre dos placas paralelas</a>
@@ -129,15 +107,13 @@
         <p>CAPACITORES</p>
         <a href="#" onclick="loadVideo('')">Capacitores</a>
         <a href="#" onclick="loadVideo('')">Capacitores planos</a>
-        <a href="#" onclick="loadVideo('videoId3')">Circuitos con capacitores </a>
-        <!-- Agrega más enlaces a otros videos aquí -->
+        <a href="#" onclick="loadVideo('videoId3')">Circuitos con capacitores</a>
         <a href="#" onclick="loadVideo('')">Ejercicios de circuitos con capacitores</a>
 
         <p>ELECTRODINAMICA</p>
         <a href="#" onclick="loadVideo('')">Corriente eléctrica</a>
         <a href="#" onclick="loadVideo('')">Resistividad de los materiales</a>
         <a href="#" onclick="loadVideo('videoId3')">Ley de Ohm</a>
-        <!-- Agrega más enlaces a otros videos aquí -->
         <a href="#" onclick="loadVideo('videoId4')">Circuitos en serie</a>
         <a href="#" onclick="loadVideo('videoId5')">Circuitos en paralelo</a>
         <a href="#" onclick="loadVideo('videoId4')">Circuitos serie-paralelo</a>
@@ -154,10 +130,10 @@
         <a href="#" onclick="loadVideo('videoId5')">Calor latente</a>
         <a href="#" onclick="loadVideo('videoId5')">Diagramas de T vs Q</a>
         <a href="#" onclick="loadVideo('videoId4')">Temperatura de equilibrio en mezclas</a>
-        <a href="#" onclick="loadVideo('videoId5')">Transmisión del calor </a>
-        <a href="#" onclick="loadVideo('videoId5')">Ejercicios I </a>
-        <a href="#" onclick="loadVideo('videoId5')">Ejercicios II </a>
-        <a href="#" onclick="loadVideo('videoId5')">Ejercicios III </a>
+        <a href="#" onclick="loadVideo('videoId5')">Transmisión del calor</a>
+        <a href="#" onclick="loadVideo('videoId5')">Ejercicios I</a>
+        <a href="#" onclick="loadVideo('videoId5')">Ejercicios II</a>
+        <a href="#" onclick="loadVideo('videoId5')">Ejercicios III</a>
 
         <p>TERMODINAMICA I</p>
         <a href="#" onclick="loadVideo('videoId6')">Sistemas</a>
@@ -188,11 +164,12 @@
         window.onload = function() {
             loadVideo('');
         };
-
+		
         function loadVideo(videoId) {
             var videoContainer = document.getElementById('video-container');
-            videoContainer.innerHTML = '<iframe width="100%" height="515" src="https://www.youtube.com/embed/' + videoId + '" frameborder="0" allowfullscreen></iframe>';
+            videoContainer.innerHTML = '<iframe width="100%" height="515" src="https://www.youtube.com/embed/' + videoId + '?rel=0&modestbranding=1&controls=0" frameborder="0" allowfullscreen></iframe>';
         }
     </script>
 </body>
 </html>
+
